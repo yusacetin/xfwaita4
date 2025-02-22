@@ -1,6 +1,6 @@
 ## Libadwaita Theme for XFWM4
 
-This is an Adwaita "port" for XFWM4 made with screenshots from Gnome applications.
+This is an Adwaita "port" for XFWM4 made with screenshots from Gnome applications. View on xfce-look.org: https://www.xfce-look.org/p/2263355
 
 ### Screenshots
 
@@ -15,7 +15,7 @@ Building requires ImageMagick and Python with PIL. Run `build.sh` in the root di
 
 ### Uninstallation
 
-Run `uninstall.sh` in the project directory to uninstall all variants or run `uninstall.sh [variant name]` to uninstall a specific variant. Don't forget to select a different theme from settings before you log out.
+Run `uninstall.sh` in the project directory to uninstall all installed variants. Don't forget to select a different theme from settings before you log out.
 
 ### Remove border padding
 
