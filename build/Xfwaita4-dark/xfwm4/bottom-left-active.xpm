@@ -1,0 +1,22 @@
+/* XPM */
+static char *bottom_left_active_xpm[] = {
+"16 16 3 1",
+"a c #3E3E3E",
+"b c #353535",
+"c c None",
+"abbbbccccccccccc",
+"abbbbccccccccccc",
+"abbbbccccccccccc",
+"abbbbccccccccccc",
+"abbbbccccccccccc",
+"abbbbccccccccccc",
+"abbbbccccccccccc",
+"abbbbccccccccccc",
+"abbbbccccccccccc",
+"abbbbccccccccccc",
+"abbbbccccccccccc",
+"abbbbbbbbbbbbbbb",
+"abbbbbbbbbbbbbbb",
+"abbbbbbbbbbbbbbb",
+"abbbbbbbbbbbbbbb",
+"aaaaaaaaaaaaaaaa"};
