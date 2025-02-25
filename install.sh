@@ -27,15 +27,18 @@ main() {
 }
 
 set_dark() {
-    BUILD_PATH="build/Xfwaita4-dark"
+    THEME_NAME="Xfwaita4-dark"
+    BUILD_PATH="build/${THEME_NAME}"
 }
 
 set_light() {
-    BUILD_PATH="build/Xfwaita4-light"
+    THEME_NAME="Xfwaita4-light"
+    BUILD_PATH="build/${THEME_NAME}"
 }
 
 install() {
-    if [ -d ${ROOTDIR} ]; then mkdir -p ${ROOTDIR}; fi;
+    if [ -d ${ROOTDIR}/${THEME_NAME} ]; then rm ${ROOTDIR}/${THEME_NAME}/xfwm4/*; rmdir ${ROOTDIR}/${THEME_NAME}/xfwm4; rmdir ${ROOTDIR}/${THEME_NAME}; fi;
+    if [ ! -d ${ROOTDIR} ]; then mkdir -p ${ROOTDIR}; fi;
     cp -r ${BUILD_PATH} ${ROOTDIR}
 }
 

@@ -17,6 +17,10 @@ Building requires ImageMagick and Python with PIL. Run `build.sh` in the root di
 
 Run `uninstall.sh` in the project directory to uninstall all installed variants. Don't forget to select a different theme from settings before you log out.
 
+### Off-center title workaround
+
+Menu, stick, and shade buttons are represented as completely transparent images, so if you place these buttons to one side of the title and the other buttons to the other side, the window title will be centered.
+
 ### Remove border padding
 
 To get the borderless version, open generate_borders.py and set DARK_BORDER_WIDTH and LIGHT_BORDER_WIDTH to 1 and then build and install.

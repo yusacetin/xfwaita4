@@ -199,6 +199,9 @@ build() {
     cp ${GEN_PATH}/${VARIANT}_active_bottom_left.png ${TEMP_PATH}/bottom-left-active.png
     cp ${GEN_PATH}/${VARIANT}_inactive_bottom_left.png ${TEMP_PATH}/bottom-left-inactive.png
 
+    # Transparent buttons
+    cp src/transparent.png ${TEMP_PATH}/transparent.png
+
     # Convert to xpm
     for fpath in ${TEMP_PATH}/*.png; do
         iname=${fpath##*/}
@@ -211,16 +214,27 @@ build() {
     cp ${BUILD_PATH}/title-active.xpm ${BUILD_PATH}/title-2-active.xpm
     cp ${BUILD_PATH}/title-active.xpm ${BUILD_PATH}/title-3-active.xpm
     cp ${BUILD_PATH}/title-active.xpm ${BUILD_PATH}/title-4-active.xpm
-    cp ${BUILD_PATH}/title-active.xpm ${BUILD_PATH}/title-5-active.xpm
+    mv ${BUILD_PATH}/title-active.xpm ${BUILD_PATH}/title-5-active.xpm # move the last one because the name is generic
 
     cp ${BUILD_PATH}/title-inactive.xpm ${BUILD_PATH}/title-1-inactive.xpm
     cp ${BUILD_PATH}/title-inactive.xpm ${BUILD_PATH}/title-2-inactive.xpm
     cp ${BUILD_PATH}/title-inactive.xpm ${BUILD_PATH}/title-3-inactive.xpm
     cp ${BUILD_PATH}/title-inactive.xpm ${BUILD_PATH}/title-4-inactive.xpm
-    cp ${BUILD_PATH}/title-inactive.xpm ${BUILD_PATH}/title-5-inactive.xpm
+    mv ${BUILD_PATH}/title-inactive.xpm ${BUILD_PATH}/title-5-inactive.xpm
 
-    rm ${BUILD_PATH}/title-active.xpm
-    rm ${BUILD_PATH}/title-inactive.xpm
+    # Copy transparent title buttons (for window title centering)
+    cp ${BUILD_PATH}/transparent.xpm ${BUILD_PATH}/shade-active.xpm
+    cp ${BUILD_PATH}/transparent.xpm ${BUILD_PATH}/shade-inactive.xpm
+    cp ${BUILD_PATH}/transparent.xpm ${BUILD_PATH}/shade-prelight.xpm
+    cp ${BUILD_PATH}/transparent.xpm ${BUILD_PATH}/shade-pressed.xpm
+    cp ${BUILD_PATH}/transparent.xpm ${BUILD_PATH}/menu-active.xpm
+    cp ${BUILD_PATH}/transparent.xpm ${BUILD_PATH}/menu-inactive.xpm
+    cp ${BUILD_PATH}/transparent.xpm ${BUILD_PATH}/menu-prelight.xpm
+    cp ${BUILD_PATH}/transparent.xpm ${BUILD_PATH}/menu-pressed.xpm
+    cp ${BUILD_PATH}/transparent.xpm ${BUILD_PATH}/stick-active.xpm
+    cp ${BUILD_PATH}/transparent.xpm ${BUILD_PATH}/stick-inactive.xpm
+    cp ${BUILD_PATH}/transparent.xpm ${BUILD_PATH}/stick-prelight.xpm
+    mv ${BUILD_PATH}/transparent.xpm ${BUILD_PATH}/stick-pressed.xpm
 
     # Get rid of temp folder
     if [ -d ${TEMP_PATH} ]; then rm -rf ${TEMP_PATH}; fi;
